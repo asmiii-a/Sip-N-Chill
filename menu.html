@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP N' CHILL | MENU</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header id="head-bar">
+    <div class="logo">
+        SIP <span>N'</span> CHILL
+        <p>cafe . dineIn . delivery</p>
+    </div>
+    <button class="hamburger" id="hamburger" type="button">☰</button>
+    <nav class="nav-bar" id="navBar">
+        <a href="home.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="offers.html">Offers</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+
+        <button id="btn-log">
+            <a href="loginfrm.html">Log In</a>
+        </button>
+    </nav>
+
+</header>
+    <section id="menu-section">
+        <button class="cart-Item"  id="cartButton" type="button">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cart-Count">0</span>
+</button>
+        <!-- <button class="cart-Item">🛒Cart - <span id="cart-Count">0</span>
+        </button>   -->
+        <div class="menu-heading">
+            <p>OUR FAVOURITES</p>
+            <h2>POPULAR TODAY</h2>
+            <span>Your favourites were prepared fresh from our kitchen.
+            </span>
+        </div>    
+        
+<div class="food-menu">
+<!-- food1 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="toast.jpeg" alt="Breakfast">
+    <span class="popular">Popular</span>
+    </div>
+<div class="food-details">
+    <h3>Classic Breakfast</h3>
+    <p>Eggs, toast, vegetables and our house special sauce.</p>
+    <div class="food-bottom">
+        <strong>₹80</strong>
+        <button onclick="addToCart(this)">Add to Cart</button>
+    </div>
+</div>
+</article>
+
+
+<!-- FOOD 19 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="sandwitch.jpeg" alt="sandwitch">
+    </div>
+<div class="food-details">
+    <h3>Sandwitch</h3>
+    <p>Special sandwich made by homely backed breads and chicken & veggi stuffs</p>
+    <div class="food-bottom">
+        <strong>₹130</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+<!-- FOOD 23 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="Waffle.jpeg" alt="Waffle">
+    </div>
+<div class="food-details">
+    <h3>Waffle</h3>
+    <p>Loaded with sprinkles and choco syrup</p>
+    <div class="food-bottom">
+        <strong>₹140</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+<!-- FOOD 3 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="burger.jpeg" alt="Burger">
+    </div>
+
+    <div class="food-details">
+    <h3>Cafe Special Burger</h3>
+    <p>Crispy patty, fresh lettuce,cheese and special sauce.</p>
+
+    <div class="food-bottom">
+        <strong>₹180</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+
+<!-- FOOD 21 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="friedrice.jpeg" alt="Fried Rice">
+    </div>
+<div class="food-details">
+    <h3>Fried Rice</h3>
+    <p>Special Spicy chinese style cusine</p>
+    <div class="food-bottom">
+        <strong>200</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+
+<!-- FOOD 24 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="noodle.jpeg" alt="Waffle">
+    </div>
+<div class="food-details">
+    <h3>Spaghetti</h3>
+    <p>chinese style spegatti with special homemade garlic sauce</p>
+    <div class="food-bottom">
+        <strong>₹200</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    
+    </div>
+</div>
+</article>
+
+
+<!-- FOOD 4 -->
+
+<article class="food-box">
+<div class="food-imag">
+    <img src="pasta.jpeg" alt="Pasta">
+</div>
+
+    <div class="food-details">
+    <h3>Creamy Pasta</h3>
+    <p>Creamy pasta tossed with vegetables,herbs and parmesan.</p>
+
+    <div class="food-bottom">
+        <strong>₹220</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+ <!-- FOOD 2 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="pizza snacks.jpeg" alt="Pizza">
+    </div>
+
+    <div class="food-details">
+    <h3>Cheese Pizza</h3>
+    <p>Freshly baked pizza with mozzarella,tomato and herbs.</p>
+    
+    <div class="food-bottom">
+    <strong>₹280</strong>
+    <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+
+<!-- FOOD 12 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="puffs.jpeg" alt="Egg Puffs">
+    </div>
+<div class="food-details">
+    <h3>Egg Puffs</h3>
+    <p>Made with fresh butter and eggs from farm seller</p>
+    <div class="food-bottom">
+        <strong>₹40</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+<!-- FOOD 13 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="samosa.jpeg" alt="samosa">
+    </div>
+<div class="food-details">
+    <h3>Samosas</h3>
+    <p>Traditional homely feeled snacks</p>
+    <div class="food-bottom">
+        <strong>₹20</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+<!-- FOOD 14-->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="sawarma.jpeg" alt="sawarma">
+    </div>
+<div class="food-details">
+    <h3>Shawarma</h3>
+    <p>Arabian style rapped chicken stuffing</p>
+    <div class="food-bottom">
+        <strong>₹90</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+<!-- FOOD 16 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="loadedfries.jpeg" alt="Loadedfries">
+    </div>
+<div class="food-details">
+    <h3>Loaded Fries</h3>
+    <p>French fries loaded with fresh mayo and chickens</p>
+    <div class="food-bottom">
+        <strong>₹150</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+<!-- FOOD 17 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="crispychik.jpeg" alt="Crispy Chicken">
+    </div>
+<div class="food-details">
+    <h3>Crispy Chicken</h3>
+    <p>Fresh Chicken coated with corn flakes and home made masalas</p>
+    <div class="food-bottom">
+        <strong>₹180</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+<!-- FOOD 18 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="steamedmomos.jpeg" alt="Steamed Momos">
+    </div>
+<div class="food-details">
+    <h3>Steamed Momos</h3>
+    <p>Fresh momos along wirh home made special chutney</p>
+    <div class="food-bottom">
+        <strong>₹90</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+
+<!-- FOOD 5 -->
+<article class="food-box">
+<div class="food-imag">
+    <img src="capacino.jpeg" alt="Cappuccino">
+</div>
+    <div class="food-details">
+    <h3>Cappuccino</h3>
+    <p>Rich espresso with steamed milk and creamy foam.</p>
+
+    <div class="food-bottom">
+    <strong>₹100</strong>
+    <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+<!-- FOOD 6 -->
+<article class="food-box">
+<div class="food-imag">
+    <img src="coffee.jpeg" alt="Coffee"></div>
+    <div class="food-details">
+    <h3>House Coffee</h3>
+    <p>Our signature freshly brewed cafe coffee.</p>
+
+    <div class="food-bottom">
+    <strong>₹20</strong>
+    <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+<!-- FOOD 9 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="badamilk.jpeg" alt="badam milk">
+    </div>
+<div class="food-details">
+    <h3>Badam Drink</h3>
+    <p>Rich drink made specially by premium badam nuts.</p>
+    <div class="food-bottom">
+        <strong>₹40</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+
+<!-- FOOD 10 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="hotchocolate.jpeg" alt="hot chocolate">
+    </div>
+<div class="food-details">
+    <h3>Chocolate Drink</h3>
+    <p>Rich chocolate drink made specially by our cafe from premium quality chocolate.</p>
+    <div class="food-bottom">
+        <strong>₹50</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+<!-- FOOD 11 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="rosemilk.jpeg" alt="Rose Milk">
+    </div>
+<div class="food-details">
+    <h3>Rose Milk</h3>
+    <p>Farm fresh rose petals are used to make this drink.</p>
+    <div class="food-bottom">
+        <strong>₹30</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+
+<!-- FOOD 15 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="milkshake.jpeg" alt="MilkShake">
+    </div>
+<div class="food-details">
+    <h3>Choco Milkshake</h3>
+    <p>Rich chocolate and farm fresh milk included with wiping cream on bottom</p>
+    <div class="food-bottom">
+        <strong>₹110</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+<!-- FOOD 20 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="tea.jpeg" alt="Tea">
+    </div>
+<div class="food-details">
+    <h3>Tea</h3>
+    <p>Sip And Chill by our special Tea</p>
+    <div class="food-bottom">
+        <strong>₹15</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+<!-- FOOD 7 -->
+<article class="food-box">
+    <div class="food-imag">
+        <img src="donut.jpeg" alt="Donuts">
+    </div>
+    <div class="food-details">
+        <h3>Chocolate Donuts</h3>
+        <p>Soft, fresh donuts topped with rich chocolate.</p>
+
+    <div class="food-bottom">
+        <strong>₹60</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+<!-- FOOD 8 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="cake.jpeg" alt="piece cake">
+    </div>
+<div class="food-details">
+    <h3>Chocolate Dessert</h3>
+    <p>Rich chocolate dessert made specially by our cafe.</p>
+    <div class="food-bottom">
+        <strong>₹60</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+
+<!-- FOOD 22 -->
+<article class="food-box">
+    <div class="food-imag">
+    <img src="icecream.jpeg" alt="Brownie">
+    </div>
+<div class="food-details">
+    <h3>IceCream Scoops</h3>
+    <p>Rich dessert made specially by our cafe.</p>
+    <div class="food-bottom">
+        <strong>₹80</strong>
+        <button onclick="addToCart(this)">Add to cart</button>
+    </div>
+</div>
+</article>
+
+        </div>
+
+    </section>
+      <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h2>Sip <span>N'</span> Chill</h2>
+            <h5>cafe . dineIn . delivery</h5>
+        </div>
+        <div class="links">
+            <h3>Quick Links</h3>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>☎ +91 77081 27225</p>
+            <p>✉ hi@sipnchill.com</p>
+            <p>🖈 Kanyakumari, Tamil Nadu</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="icons">
+                <a href="#">◎ Instagram</a>
+                <a href="#">ⓕ Facebook</a>
+                <a href="#">✆ WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Sip N' Chill. All Rights Reserved.</p>
+    </div>
+
+</footer>
+<div id="cart-popup">
+
+    <div class="cart-header">
+        <h3>
+            <i class="fa-solid fa-cart-shopping"></i>
+            Your Cart
+        </h3>
+
+        <button id="close-cart">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <div id="cart-items">
+        <p class="empty-cart">Your cart is empty</p>
+    </div>
+
+    <div class="cart-total">
+        <span>Total</span>
+        <strong id="cart-total-price">₹0</strong>
+    </div>
+
+</div>
+<button id="backToTop" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+    <script>
+
+// cart popup
+const cartButton = document.getElementById("cartButton");
+const cartPopup = document.getElementById("cart-popup");
+const closeCart = document.getElementById("close-cart");
+
+cartButton.addEventListener("click", function () {
+    cartPopup.classList.toggle("show");
+});
+
+closeCart.addEventListener("click", function () {
+    cartPopup.classList.remove("show");
+});
+
+// cartadd
+let cartCount = 0;
+
+function addToCart() {
+    cartCount++;
+    document.getElementById("cart-Count").textContent = cartCount;
+}
+
+// back to top
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 300) {
+        backToTop.style.display = "flex";
+    } else {
+        backToTop.style.display = "none";
+    }
+
+});
+
+backToTop.addEventListener("click", function () {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+// hamburger
+const hamburger = document.getElementById("hamburger");
+    const navBar = document.getElementById("navBar");
+
+    hamburger.addEventListener("click", function () {
+        navBar.classList.toggle("active");
+    });
+</script>
+</body>
+
+</html>

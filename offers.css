@@ -1,0 +1,1805 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #6d4f30;
+    overflow-x: hidden;
+}
+/* =====================================================
+   HEADER
+===================================================== */
+
+#head-bar {
+    min-height: 90px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #62462c 0%,
+            #6d4f30 30%,
+            #795a3b 50%,
+            #6d4f30 70%,
+            #5c4128 100%
+        );
+
+    box-shadow:
+        0 5px 5px rgba(70, 48, 29, 0.45);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 30px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 3000;
+
+    border-bottom: 1px solid #29190f;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    font-family:
+        Impact,
+        Haettenschweiler,
+        'Arial Narrow Bold',
+        sans-serif;
+
+    font-weight: bolder;
+
+    color: #29190f;
+
+    font-size: 38px;
+
+    font-style: italic;
+
+    margin-left: 60px;
+
+    white-space: nowrap;
+}
+
+.logo span {
+    font-family: cursive;
+
+    color: #9e9b61;
+
+    font-size: 38px;
+
+    font-weight: bolder;
+
+    font-style: italic;
+}
+
+.logo p {
+    font-family: cursive;
+
+    font-size: 12px;
+
+    font-weight: bolder;
+
+    color: #9e9b61;
+
+    line-height: 1.1;
+
+    text-align: center;
+
+    margin-top: -3px;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav-bar {
+    display: flex;
+
+    gap: 45px;
+
+    align-items: center;
+}
+
+.nav-bar a {
+    text-decoration: none;
+
+    color: #29190f;
+
+    font-family:
+        'Lucida Sans',
+        'Lucida Sans Regular',
+        'Lucida Grande',
+        'Lucida Sans Unicode',
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    font-weight: bolder;
+
+    font-size: 16px;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s ease;
+}
+
+.nav-bar a:hover {
+    color: #9e9b61;
+}
+
+
+/* =====================================================
+   LOGIN BUTTON
+===================================================== */
+
+#btn-log {
+    background-color: #29190f;
+
+    border-radius: 6px;
+
+    box-shadow:
+        5px 0 5px #241b12;
+
+    font-family:
+        'Lucida Sans',
+        'Lucida Sans Regular',
+        'Lucida Grande',
+        'Lucida Sans Unicode',
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    font-weight: bold;
+
+    padding: 7px 12px;
+
+    border: none;
+
+    margin-left: 10px;
+
+    font-size: 14px;
+
+    letter-spacing: 1.2px;
+}
+
+#btn-log a {
+    text-decoration: none;
+
+    color: #9e9b61;
+}
+
+
+/* =====================================================
+   HAMBURGER
+===================================================== */
+
+.hamburger {
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: #29190f;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   CART BUTTON
+=====================================================  */
+
+.cart-Item {
+    position:absolute;
+
+    top: 110px;
+    right: 45px;
+
+    background: none;
+    border: none;
+
+    color: #29190f;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+}
+
+#cart-Count {
+    position: absolute;
+
+    top: -8px;
+    right: -10px;
+
+    background: #9e9b61;
+    color: white;
+
+    width: 19px;
+    height: 19px;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   OFFER SECTION
+===================================================== */
+
+#offer-sec {
+    width: 100%;
+
+    padding: 50px 30px 80px;
+
+    overflow: hidden;
+}
+
+#offer-sec h4 {
+    text-align: center;
+
+    color: #29190f;
+
+    font-size: 40px;
+
+    font-family:
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+#offer-sec > p {
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #24160d;
+
+    font-size: 21px;
+
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Open Sans',
+        'Helvetica Neue',
+        sans-serif;
+
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   OFFER BOXES
+===================================================== */
+
+.box,
+.box1,
+.box2 {
+    width: 100%;
+    max-width: 1260px;
+
+    height: 210px;
+
+    margin: 40px auto 0;
+
+    padding: 10px;
+
+    text-align: center;
+
+    border-radius: 9px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    filter: brightness(80%);
+
+    box-shadow: 9px 0 10px black;
+
+    transition: 0.4s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    background-image: url(chocobg.jpeg);
+}
+
+.box1 {
+    background-image: url(bakingbg.jpeg);
+    background-position: bottom;
+}
+
+.box2 {
+    background-image: url(box2.jpeg);
+}
+
+.box:hover,
+.box1:hover,
+.box2:hover {
+    transform: translateX(-8px);
+}
+
+
+/* =====================================================
+   OFFER BOX TEXT
+===================================================== */
+
+.box h3,
+.box1 h3,
+.box2 h3 {
+    color: white;
+
+    font-size: 25px;
+
+    line-height: 25px;
+
+    font-family:
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+}
+
+.box h2,
+.box1 h2,
+.box2 h2 {
+    color: #ce6524;
+
+    font-size: 76px;
+
+    line-height: 1;
+
+    margin: 10px 0;
+
+    font-family:
+        'Lucida Sans',
+        'Lucida Sans Regular',
+        'Lucida Grande',
+        'Lucida Sans Unicode',
+        Geneva,
+        Verdana,
+        sans-serif;
+}
+
+.box h5,
+.box1 h5,
+.box2 h5 {
+    color: white;
+
+    font-size: 17px;
+
+    letter-spacing: 1px;
+
+    font-family:
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   COMBO SECTION
+===================================================== */
+
+#combo-list {
+    width: 100%;
+    max-width: 1160px;
+
+    margin: 120px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 60px 50px;
+}
+
+
+/* =====================================================
+   COMBO TITLE
+===================================================== */
+
+#combo-list .comb {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    margin: 0 0 5px;
+
+    color: #29190f;
+
+    font-size: 50px;
+
+    font-family:
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   COMBO CARD
+===================================================== */
+
+#combo-list > div {
+    width: 100%;
+
+    background-image: url(mode.png);
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 12px;
+
+    height: 480px;
+
+    overflow: hidden;
+
+    box-shadow: 10px 0 10px black;
+
+    transition: 0.3s ease;
+
+    text-align: center;
+}
+
+#combo-list > div:hover {
+    transform: translateY(-7px);
+}
+
+
+/* =====================================================
+   COMBO IMAGE
+===================================================== */
+
+#combo-list > div > img {
+    display: block;
+
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    filter: brightness(80%);
+
+    transition: 0.3s ease;
+}
+
+#combo-list > div > img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =====================================================
+   COMBO TEXT
+===================================================== */
+
+#combo-list h2 {
+    margin: 10px 20px;
+
+    color: white;
+
+    text-align: center;
+
+    line-height: 27px;
+
+    font-size: 18px;
+}
+
+#combo-list h1 {
+    margin: 10px 20px;
+
+    color: #ce6524;
+
+    text-align: center;
+
+    line-height: 15px;
+
+    font-size: 40px;
+}
+
+#combo-list h3 {
+    margin: 10px 20px;
+
+    color: white;
+
+    text-align: center;
+
+    line-height: 25px;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   CLAIM BUTTON
+===================================================== */
+
+#combo-list button {
+    letter-spacing: 0;
+
+    margin-top: 5px;
+
+    border: none;
+
+    background-color: #6d4f30;
+
+    color: #24160d;
+
+    padding: 8px 14px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+
+    font-family:
+        Verdana,
+        Geneva,
+        Tahoma,
+        sans-serif;
+
+    box-shadow: 5px 0 10px #070504;
+}
+
+#combo-list button:hover {
+    border: 1px solid #070504;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   CART POPUP
+===================================================== */
+
+#cart-popup {
+    position: fixed;
+
+    top: 105px;
+    right: 25px;
+
+    width: 350px;
+
+    max-width: calc(100vw - 30px);
+
+    max-height: 500px;
+
+    background-color: #9e9b61;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+
+    padding: 20px;
+
+    z-index: 2500;
+
+    display: none;
+
+    overflow: hidden;
+}
+
+#cart-popup.show {
+    display: block;
+
+    animation: cartOpen 0.25s ease;
+}
+
+@keyframes cartOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   CART HEADER
+===================================================== */
+
+.cart-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #29190f;
+
+    padding-bottom: 12px;
+
+    margin-bottom: 15px;
+}
+
+.cart-header h3 {
+    color: #29190f;
+
+    font-size: 20px;
+}
+
+#close-cart {
+    background: none;
+
+    border: none;
+
+    color: #29190f;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   CART ITEMS
+===================================================== */
+
+#cart-items {
+    max-height: 300px;
+
+    overflow-y: auto;
+
+    padding-right: 3px;
+}
+
+.cart-product {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+
+    background-color: #6d4f30;
+
+    color: white;
+
+    padding: 12px;
+
+    margin-bottom: 8px;
+
+    border-radius: 5px;
+}
+
+.cart-product-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-width: 0;
+}
+
+.cart-product-name {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: white;
+
+    word-break: break-word;
+}
+
+.cart-product-info small {
+    color: #ddd;
+
+    font-size: 12px;
+}
+
+.cart-product-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.cart-product-right strong {
+    color: #9e9b61;
+
+    white-space: nowrap;
+}
+
+.remove-cart {
+    border: none;
+
+    background: none;
+
+    color: #9e9b61;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.remove-cart:hover {
+    color: white;
+}
+
+
+/* =====================================================
+   EMPTY CART
+===================================================== */
+
+.empty-cart {
+    text-align: center;
+
+    color: #29190f;
+
+    padding: 20px;
+}
+
+
+/* =====================================================
+   CART TOTAL
+===================================================== */
+
+.cart-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #29190f;
+
+    margin-top: 15px;
+
+    padding-top: 15px;
+
+    color: #29190f;
+
+    font-size: 18px;
+}
+
+#cart-total-price {
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+#backToTop {
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #29190f;
+
+    color: #9e9b61;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.4);
+
+    z-index: 2000;
+
+    transition: 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #9e9b61;
+
+    color: #29190f;
+
+    transform: translateY(-5px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    margin-top: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #62462c 0%,
+            #6d4f30 30%,
+            #795a3b 50%,
+            #6d4f30 70%,
+            #5c4128 100%
+        );
+
+    color: #9e9b61;
+
+    padding: 50px 30px 15px;
+}
+
+.footer-container {
+    width: 100%;
+
+    max-width: 1100px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1.3fr 1fr;
+
+    gap: 40px;
+
+    margin: auto;
+}
+
+.footer h2 {
+    font-family:
+        Impact,
+        Haettenschweiler,
+        'Arial Narrow Bold',
+        sans-serif;
+
+    font-weight: bolder;
+
+    color: #20140c;
+
+    font-size: 45px;
+
+    font-style: italic;
+}
+
+.footer span {
+    font-family: cursive;
+
+    color: #9e9b61;
+
+    font-size: 45px;
+
+    font-weight: bolder;
+
+    font-style: italic;
+}
+
+.footer h5 {
+    font-family: cursive;
+
+    font-size: 15px;
+
+    font-weight: bolder;
+
+    color: #9e9b61;
+
+    margin: 0 0 4px;
+}
+
+.footer h3 {
+    margin: 0 0 18px;
+
+    color: #20140c;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    font-family:
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+}
+
+.footer-contact p {
+    color: white;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    margin: 8px 0;
+
+    text-align: center;
+
+    letter-spacing: 1px;
+
+    font-family:
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+}
+
+.links {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.links a {
+    color: white;
+
+    text-decoration: none;
+
+    margin-bottom: 10px;
+
+    transition: 0.3s;
+
+    font-family:
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+
+    text-align: center;
+}
+
+.links a:hover {
+    color: #967866;
+
+    padding-left: 5px;
+}
+
+.icons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.icons a {
+    color: white;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+
+    font-family:
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+}
+
+.icons a:hover {
+    color: #967866;
+
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+
+    margin: 40px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #4a3025;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: white;
+
+    font-family:
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   LARGE TABLET
+   1100px AND BELOW
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    /* HEADER */
+
+    #head-bar {
+        padding: 8px 25px;
+    }
+
+    .logo {
+        margin-left: 20px;
+        font-size: 32px;
+    }
+
+    .logo span {
+        font-size: 32px;
+    }
+
+    .nav-bar {
+        gap: 25px;
+    }
+
+    .nav-bar a {
+        font-size: 14px;
+    }
+
+
+    /* OFFERS */
+
+    #offer-sec {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .box,
+    .box1,
+    .box2 {
+        width: 100%;
+    }
+
+
+    /* COMBOS */
+
+    #combo-list {
+        max-width: 900px;
+
+        gap: 40px 30px;
+    }
+
+    #combo-list > div {
+        height: 450px;
+    }
+
+    #combo-list > div > img {
+        height: 290px;
+    }
+
+    #combo-list .comb {
+        font-size: 42px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap:60px;
+        padding: 0 25px;
+    }
+    .footer-brand h2{
+        margin-top:40px;
+        font-size:29px;
+        text-align: center;
+    }
+    .footer-brand h5{
+        font-size: 9px;
+        text-align: center;
+    }
+    .footer-brand span{
+        font-size:29px;
+        
+    }
+    .footer-contact p{
+        font-size: 10px;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+   768px AND BELOW
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+
+    #head-bar {
+        min-height: 75px;
+
+        padding: 8px 20px;
+    }
+
+    .logo {
+        margin-left: 0;
+
+        font-size: 28px;
+    }
+
+    .logo span {
+        font-size: 28px;
+    }
+
+    .logo p {
+        font-size: 9px;
+    }
+
+
+    /* HAMBURGER */
+
+    .hamburger {
+        display: block;
+
+        z-index: 4000;
+    }
+
+
+    /* NAVIGATION */
+
+    .nav-bar {
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        background:
+            linear-gradient(
+                135deg,
+                #62462c,
+                #795a3b,
+                #5c4128
+            );
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+
+        padding: 20px 0;
+
+        box-shadow:
+            0 8px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .nav-bar a {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 13px 0;
+
+        font-size: 16px;
+    }
+
+    #btn-log {
+        margin: 10px 0 0;
+
+        padding: 8px 20px;
+    }
+
+
+    /* CART */
+
+    .cart-Item {
+        top: 120px;
+
+        right: 38px;
+
+        font-size: 23px;
+    }
+
+
+    /* OFFER SECTION */
+
+    #offer-sec {
+        padding: 45px 20px 70px;
+    }
+
+    #offer-sec h4 {
+        font-size: 34px;
+
+        line-height: 1.2;
+
+        margin-bottom: 15px;
+    }
+
+    #offer-sec > p {
+        font-size: 17px;
+
+        line-height: 1.5;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* OFFER BOXES */
+
+    .box,
+    .box1,
+    .box2 {
+        height: 200px;
+
+        margin-top: 30px;
+
+        padding: 15px;
+    }
+
+    .box h3,
+    .box1 h3,
+    .box2 h3 {
+        font-size: 22px;
+    }
+
+    .box h2,
+    .box1 h2,
+    .box2 h2 {
+        font-size: 55px;
+
+        margin: 8px 0;
+    }
+
+    .box h5,
+    .box1 h5,
+    .box2 h5 {
+        font-size: 14px;
+
+        line-height: 1.4;
+    }
+
+
+    /* COMBO GRID */
+
+    #combo-list {
+        grid-template-columns: 1fr;
+
+        max-width: 520px;
+
+        margin-top: 90px;
+
+        gap: 45px;
+    }
+
+    #combo-list .comb {
+        grid-column: 1;
+
+        font-size: 38px;
+
+        line-height: 1.2;
+
+        margin-bottom: 10px;
+    }
+
+
+    /* COMBO CARD */
+
+    #combo-list > div {
+        width: 100%;
+
+        height: auto;
+
+        min-height: 450px;
+    }
+
+    #combo-list > div > img {
+        height: 290px;
+    }
+
+
+    /* CART */
+
+    #cart-popup {
+        top: 90px;
+
+        right: 15px;
+
+        width: 350px;
+
+        max-width: calc(100vw - 30px);
+    }
+
+
+    /* FOOTER */
+    .footer-container {
+        grid-template-columns:  1fr;
+        gap:60px;
+        padding: 0 25px;
+    }
+    .footer-brand h2{
+        margin-top:40px;
+        font-size:30px;
+        text-align: center;
+    }
+    .footer-brand h5{
+        font-size: 11px;
+        text-align: center;
+    }
+    .footer-brand span{
+        font-size:30px;
+        
+    }
+    .footer-contact p{
+        font-size: 10px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   576px AND BELOW
+===================================================== */
+
+@media (max-width: 576px) {
+
+    /* HEADER */
+
+    #head-bar {
+        min-height: 70px;
+
+        padding: 7px 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .logo span {
+        font-size: 24px;
+    }
+
+    .logo p {
+        font-size: 8px;
+    }
+
+    .hamburger {
+        font-size: 27px;
+    }
+
+
+    /* CART */
+
+    .cart-Item {
+        top: 94px;
+
+        right: 33px;
+
+        font-size: 21px;
+    }
+
+    #cart-Count {
+        width: 17px;
+        height: 17px;
+
+        font-size: 10px;
+
+        top: -7px;
+        right: -8px;
+    }
+
+
+    /* OFFER SECTION */
+
+    #offer-sec {
+        padding: 40px 14px 60px;
+    }
+
+    #offer-sec h4 {
+        font-size: 29px;
+
+        letter-spacing: 1px;
+    }
+
+    #offer-sec > p {
+        font-size: 15px;
+
+        letter-spacing: 0.5px;
+
+        line-height: 1.5;
+    }
+
+
+    /* OFFER BOXES */
+
+    .box,
+    .box1,
+    .box2 {
+        height: 185px;
+
+        margin-top: 25px;
+
+        padding: 12px;
+
+        box-shadow: 5px 5px 10px black;
+    }
+
+    .box h3,
+    .box1 h3,
+    .box2 h3 {
+        font-size: 19px;
+    }
+
+    .box h2,
+    .box1 h2,
+    .box2 h2 {
+        font-size: 42px;
+
+        margin: 7px 0;
+    }
+
+    .box h5,
+    .box1 h5,
+    .box2 h5 {
+        font-size: 12px;
+
+        letter-spacing: 0.5px;
+
+        line-height: 1.4;
+    }
+
+
+    /* COMBO */
+
+    #combo-list {
+        width: 100%;
+
+        margin-top: 70px;
+
+        gap: 35px;
+    }
+
+    #combo-list .comb {
+        font-size: 30px;
+
+        line-height: 1.2;
+    }
+
+
+    /* COMBO CARD */
+
+    #combo-list > div {
+        min-height: 430px;
+
+        height: auto;
+
+        border-radius: 10px;
+
+        box-shadow: 5px 5px 10px black;
+    }
+
+    #combo-list > div > img {
+        height: 230px;
+    }
+
+    #combo-list h2 {
+        font-size: 17px;
+
+        margin: 10px 15px;
+    }
+
+    #combo-list h1 {
+        font-size: 34px;
+
+        margin: 8px 15px;
+    }
+
+    #combo-list h3 {
+        font-size: 15px;
+
+        line-height: 22px;
+
+        margin: 8px 15px;
+    }
+
+    #combo-list button {
+        margin-top: 5px;
+
+        padding: 8px 12px;
+
+        font-size: 13px;
+    }
+
+
+    /* CART POPUP */
+
+    #cart-popup {
+        top: 80px;
+
+        right: 10px;
+
+        width: calc(100vw - 20px);
+
+        max-width: none;
+
+        padding: 15px;
+
+        max-height: 70vh;
+    }
+
+    #cart-items {
+        max-height: 45vh;
+    }
+
+
+    /* BACK TO TOP */
+
+    #backToTop {
+        width: 40px;
+        height: 40px;
+
+        bottom: 18px;
+        right: 18px;
+
+        font-size: 17px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 40px 20px 15px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer h2 {
+        font-size:30px;
+    }
+
+    .footer span {
+        font-size:30px;
+    }
+
+    .footer h5 {
+        font-size: 12px;
+    }
+
+    .footer h3 {
+        font-size: 18px;
+
+        margin-bottom: 15px;
+    }
+
+    .footer-contact p {
+        font-size: 13px;
+    }
+
+    .links a,
+    .icons a {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+
+        padding-top: 15px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+
+        letter-spacing: 1px;
+
+        line-height: 1.5;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   400px AND BELOW
+===================================================== */
+
+@media (max-width: 400px) {
+
+    /* HEADER */
+
+    #head-bar {
+        padding: 7px 12px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .logo span {
+        font-size: 21px;
+    }
+
+    .logo p {
+        font-size: 7px;
+    }
+
+    .hamburger {
+        font-size: 25px;
+    }
+
+
+    /* CART */
+
+    .cart-Item {
+        right:20px;
+
+        font-size: 20px;
+    }
+
+
+    /* OFFERS */
+
+    #offer-sec {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #offer-sec h4 {
+        font-size: 25px;
+    }
+
+    #offer-sec > p {
+        font-size: 13px;
+    }
+
+
+    /* OFFER CARDS */
+
+    .box,
+    .box1,
+    .box2 {
+        height: 170px;
+
+        padding: 8px;
+    }
+
+    .box h3,
+    .box1 h3,
+    .box2 h3 {
+        font-size: 17px;
+    }
+
+    .box h2,
+    .box1 h2,
+    .box2 h2 {
+        font-size: 35px;
+    }
+
+    .box h5,
+    .box1 h5,
+    .box2 h5 {
+        font-size: 11px;
+    }
+
+
+    /* COMBO */
+
+    #combo-list .comb {
+        font-size: 26px;
+    }
+
+    #combo-list > div {
+        min-height: 400px;
+    }
+
+    #combo-list > div > img {
+        height: 200px;
+    }
+
+    #combo-list h2 {
+        font-size: 15px;
+    }
+
+    #combo-list h1 {
+        font-size: 30px;
+    }
+
+    #combo-list h3 {
+        font-size: 13px;
+
+        line-height: 20px;
+    }
+
+    #combo-list button {
+        font-size: 12px;
+    }
+
+
+    /* FOOTER */
+
+    .footer h2 {
+        font-size: 28px;
+    }
+
+    .footer span {
+        font-size: 28px;
+    }
+}

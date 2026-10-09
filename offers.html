@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP N' CHILL | OFFERS</title>
+    <link rel="stylesheet" href="offers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+   <header id="head-bar">
+    <div class="logo">
+        SIP <span>N'</span> CHILL
+        <p>cafe . dineIn . delivery</p>
+    </div>
+    <button class="hamburger" id="hamburger" type="button">☰</button>
+    <nav class="nav-bar" id="navBar">
+        <a href="home.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="offers.html">Offers</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+
+        <button id="btn-log">
+            <a href="loginfrm.html">Log In</a>
+        </button>
+    </nav>
+    </header>
+    <section id="menu-section">
+        <button class="cart-Item"  id="cartButton" type="button">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cart-Count">0</span>
+</button>
+    <section id="offer-sec">
+        <h4>Sip, Save & Chill</h4>
+        <p class>Enjoy our delicious café specials at amazing Offers!</p>
+        <div class="box">
+        <h3>Week end Treat</h3>
+        <h2>BUY 1 GET 1</h2>
+        <h5>Buy One And Get Another One Free.<br>Hurry UP And Grab Our Limited Deal!</h5>
+        </div>
+        <div class="box1">
+        <h3>Welcome Treat</h3>
+        <h2>30% OFF</h2>
+        <h5>Get 30% Off On Your Desires in Your First Order.<br>Taste Our Food ; Get In Touch!</h5> 
+        </div>
+        <div class="box2">
+         <h3>Dinner Special</h3>
+        <h2>10% OFF</h2>
+        <h5>Dine In, Enjoy Every Bite.<br>Join Us For A Savory Dinner!</h5>   
+        </div>
+        <div id="combo-list">
+            <p class="comb">Try Our Special Combo Deals!</p>
+            <div>
+                <img src="99.jpeg">
+            <h2>COMBO DEAL</h2>
+            <h1>₹99</h1>
+            <h3>Tea + Egg Puffs + Cake</h3>
+            <button onclick="addToCart(this)">Claim Now→</button>
+         </div>
+         <div>
+            <img src="199.jpeg">
+            <h2>COMBO DEAL</h2>
+            <h1>₹199</h1>
+            <h3>Coffee + Sandwitch + Browine</h3>
+            <button onclick="addToCart(this)">Claim Now→</button>
+         </div>
+         <div>
+            <img src="299.jpeg">
+            <h2>COMBO DEAL</h2>
+            <h1>₹299</h1>
+            <h3>Spaghetti + IceCream + Donuts</h3>
+            <button onclick="addToCart(this)">Claim Now→</button>
+         </div>
+         <div>
+            <img src="399.jpeg">
+            <h2>COMBO DEAL</h2>
+            <h1>₹399</h1>
+            <h3>FriedRice + Choco Milkshake + Shawarma</h3>
+            <button onclick="addToCart(this)">Claim Now→</button>
+         </div>
+         <div>
+            <img src="499.jpeg">
+            <h2>COMBO DEAL</h2>
+            <h1>₹499</h1>
+            <h3>Chessy Pasta + Cappuccino + Crispy Chicken + BadamMilk</h3>
+            <button onclick="addToCart(this)">Claim Now→</button>
+         </div>
+         <div>
+            <img src="599.jpeg">
+            <div>
+            <h2>COMBO DEAL</h2>
+            <h1>₹599</h1>
+            <h3>Pizza + LoadedFries + FriedRice + Hot Chocolate</h3>
+            <button onclick="addToCart(this)">Claim Now→</button>
+            </div>
+         </div>
+        </div>
+    </section>
+     <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h2>Sip <span>N'</span> Chill</h2>
+            <h5>cafe . dineIn . delivery</h5>
+        </div>
+        <div class="links">
+            <h3>Quick Links</h3>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>☎ +91 77081 27225</p>
+            <p>✉ hi@sipnchill.com</p>
+            <p>🖈 Kanyakumari, Tamil Nadu</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="icons">
+                <a href="#">◎ Instagram</a>
+                <a href="#">ⓕ Facebook</a>
+                <a href="#">✆ WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Sip N' Chill. All Rights Reserved.</p>
+    </div>
+
+</footer>
+<div id="cart-popup">
+
+    <div class="cart-header">
+        <h3>
+            <i class="fa-solid fa-cart-shopping"></i>
+            Your Cart
+        </h3>
+
+        <button id="close-cart">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <div id="cart-items">
+        <p class="empty-cart">Your cart is empty</p>
+    </div>
+
+    <div class="cart-total">
+        <span>Total</span>
+        <strong id="cart-total-price">₹0</strong>
+    </div>
+
+</div>
+<button id="backToTop" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+ <script>
+
+// cart popup
+const cartButton = document.getElementById("cartButton");
+const cartPopup = document.getElementById("cart-popup");
+const closeCart = document.getElementById("close-cart");
+
+cartButton.addEventListener("click", function () {
+    cartPopup.classList.toggle("show");
+});
+
+closeCart.addEventListener("click", function () {
+    cartPopup.classList.remove("show");
+});
+
+// cartadd
+let cartCount = 0;
+
+function addToCart() {
+    cartCount++;
+    document.getElementById("cart-Count").textContent = cartCount;
+}
+
+// back to top
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 300) {
+        backToTop.style.display = "flex";
+    } else {
+        backToTop.style.display = "none";
+    }
+
+});
+
+backToTop.addEventListener("click", function () {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+// hamburger
+const hamburger = document.getElementById("hamburger");
+    const navBar = document.getElementById("navBar");
+
+    hamburger.addEventListener("click", function () {
+        navBar.classList.toggle("active");
+    });
+</script>
+</body>
+</html>

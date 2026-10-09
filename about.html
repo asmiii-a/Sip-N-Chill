@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP N' CHILL | ABOUT</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <header id="head-bar">
+    <div class="logo">
+        SIP <span>N'</span> CHILL
+        <p>cafe . dineIn . delivery</p>
+    </div>
+    <button class="hamburger" id="hamburger" type="button">☰</button>
+    <nav class="nav-bar" id="navBar">
+        <a href="home.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="offers.html">Offers</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+
+        <button id="btn-log">
+            <a href="loginfrm.html">Log In</a>
+        </button>
+    </nav>
+
+</header>
+    <section class="about-section" id="about">
+  <div class="about-container">
+
+    <div class="about-header">
+    <p>The Story Of</p>
+      <span class="about-tag">Sip <span class="tag2">N'</span> Chill</span>
+      <p class="about-intro">
+        Welcome to <span> Sip N' Chill</span>, your go-to spot for great
+        coffee, delicious bites, and good vibes.
+      </p>
+    </div>
+    <div class="about-content">
+        <div class="about-story">
+        <h3>Our Story</h3>
+        <p>
+          At Sip N' Chill, we believe that every drink comes with a moment
+          worth enjoying. Whether you're starting your day with a refreshing
+          cup of coffee, catching up with friends, taking a break from work,
+          or simply looking for a cozy place to relax, we're here to make your
+          time special.
+        </p>
+        <p>
+          Sip N' Chill was created with a simple idea — bring people together
+          over great drinks and good food.
+        </p>
+        <p>
+          From carefully crafted coffees and refreshing beverages to tasty
+          snacks and treats, we focus on quality, freshness, and flavor in
+          everything we serve. Our welcoming atmosphere is designed to make
+          you feel comfortable, relaxed, and right at home.
+        </p>
+      </div>
+      <div class="why">
+        <h3>Why Sip N' Chill?</h3>
+        <div>
+            <h4>Fresh & Flavorful</h4>
+            <p>Quality ingredients and delicious drinks made with care.</p>
+        </div>
+        <div>
+            <h4>Something for Everyone</h4>
+            <p>A variety of beverages, snacks, and treats to satisfy every craving.</p>
+        </div>
+        <div>
+            <h4>Good Vibes</h4>
+            <p>A relaxed atmosphere perfect for conversations, work, or simply chilling.</p>
+        </div>
+        <div>
+            <h4>Made for You</h4>
+            <p>Friendly service and an experience that keeps you coming back.</p>
+        </div>
+</div>
+    
+<div id="come-chill">
+      <h3>Come, Sip & Chill</h3>
+      <p>Life gets busy. Take a moment to slow down, grab your favorite drink,
+        and enjoy the little things.</p>
+      <div class="tagline">
+        Sip N' Chill — Your happy place, one sip at a time.
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h2>Sip <span>N'</span> Chill</h2>
+            <h5>cafe . dineIn . delivery</h5>
+        </div>
+        <div class="links">
+            <h3>Quick Links</h3>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>☎ +91 77081 27225</p>
+            <p>✉ hi@sipnchill.com</p>
+            <p>🖈 Kanyakumari, Tamil Nadu</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="icons">
+                <a href="#">◎ Instagram</a>
+                <a href="#">ⓕ Facebook</a>
+                <a href="#">✆ WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Sip N' Chill. All Rights Reserved.</p>
+    </div>
+    <button id="backToTop" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+</footer>
+<script>
+  // back to top
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 300) {
+        backToTop.style.display = "flex";
+    } else {
+        backToTop.style.display = "none";
+    }
+
+});
+
+backToTop.addEventListener("click", function () {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+// hamburger
+const hamburger = document.getElementById("hamburger");
+    const navBar = document.getElementById("navBar");
+
+    hamburger.addEventListener("click", function () {
+        navBar.classList.toggle("active");
+    });
+</script>
+</script>
+</body>
+</html>
+
+
+
+
+

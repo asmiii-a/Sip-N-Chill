@@ -1,0 +1,589 @@
+/* body{
+    background-image:url(loginbgimg.png);
+    font-family: Arial, sans-serif;
+}
+#loginsec {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 5px 70px;
+    gap: 80px;
+} 
+.heading img{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 5px;
+    
+} 
+.heading{
+  margin-left: 29px;
+  align-items: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;  
+  gap: 2px;
+  margin-top: -35px;
+  
+}
+.heading h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    color: #29190f;
+    font-size:45px;
+    font-style: italic;
+    margin: 0 ;
+    line-height: 1;
+}
+.heading span{
+    font-family:cursive;
+    color: #9e9b61;
+    font-size:45px;
+    font: bolder;
+    font-style: italic;
+}
+.heading p {
+    font-family:cursive;
+    font-size:15px;
+    font-weight:bolder;
+    color:#9e9b61;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2px;
+}
+.formitm{
+    width: 400px;
+    padding: 40px;
+    background-image: url(towel.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px#6d4f30;
+    margin: auto;
+    box-shadow: 0 10px 12px #29190f;
+}
+.formitm form{
+    display: flex;
+    flex-direction:column;
+}
+.formitm label{
+    color: #9e9b61;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.formitm input {
+    padding: 13px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    color: #29190f;
+    background-color: #9e9b61;
+    box-shadow: 0 10px 12px #29190f;
+}
+input::placeholder{
+    color: #6d4f30;
+}
+.btn{
+    padding:6px;
+    border-radius: 6px;
+    background-color: #9e9b61;
+    color: #29190f;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 90px;
+    align-self: center;
+    box-shadow: 0 10px 12px #29190f;
+    border: #29190f;
+}
+.btn:hover{
+    transform:scale(0.9);
+}
+.formitm p{
+    color: #9e9b61;
+    text-align:center;
+    font-size:15px;
+    font-weight: bolder;
+    line-height: 1px;
+}
+.formitm a{
+    color: #9e9b61;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom:12px;
+    text-decoration: underline;
+    text-align: center;
+    width:60px;
+    align-self: center
+} */
+
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image:
+        url("loginbgimg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #29190f;
+}
+
+
+/* =========================
+   LOGIN SECTION
+========================= */
+
+#loginsec {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 50px;
+    padding: 70px 8%;
+    position: relative;
+}
+
+
+/* =========================
+   BACK ARROW
+========================= */
+
+.back-btn {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #9e9b61;
+    background: #29190f;
+    border: 1px solid #9e9b61;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 5px 12px rgba(41, 25, 15, 0.4);
+    transition: 0.3s ease;
+    z-index: 2;
+}
+
+.back-btn:hover {
+    background: #9e9b61;
+    color: #29190f;
+    transform: translateX(-4px);
+}
+
+
+/* =========================
+   LOGO AND HEADING
+========================= */
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+.heading img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.heading h1 {
+    font-family: Impact, Haettenschweiler,
+                 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    color: #29190f;
+    font-size: clamp(30px, 3.5vw, 45px);
+    font-style: italic;
+    line-height: 1.1;
+}
+
+.heading span {
+    font-family: cursive;
+    color: #9e9b61;
+    font-size: inherit;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.heading p {
+    font-family: cursive;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #9e9b61;
+    line-height: 1.4;
+}
+
+
+/* =========================
+   FORM CONTAINER
+========================= */
+
+.formitm {
+    width: 100%;
+    max-width: 400px;
+    min-width: 0;
+    padding: 35px;
+    background-image:
+        linear-gradient(
+            rgba(41, 25, 15, 0.2),
+            rgba(41, 25, 15, 0.2)
+        ),
+        url("towel.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(41, 25, 15, 0.75);
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
+}
+
+
+/* =========================
+   FORM LAYOUT
+========================= */
+
+.formitm form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formitm form[hidden] {
+    display: none;
+}
+
+.formitm h2 {
+    color: #9e9b61;
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.formitm label {
+    color: #9e9b61;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.formitm input {
+    width: 100%;
+    min-width: 0;
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    color: #29190f;
+    background-color: #9e9b61;
+    box-shadow: 0 5px 10px rgba(41, 25, 15, 0.45);
+    transition: 0.3s ease;
+}
+
+.formitm input::placeholder {
+    color: #6d4f30;
+}
+
+.formitm input:focus {
+    border-color: #e0d8a2;
+    box-shadow: 0 0 0 3px rgba(158, 155, 97, 0.25);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    padding: 11px 20px;
+    border: 1px solid #29190f;
+    border-radius: 6px;
+    background-color: #9e9b61;
+    color: #29190f;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px auto 22px;
+    min-width: 110px;
+    align-self: center;
+    box-shadow: 0 6px 12px rgba(41, 25, 15, 0.55);
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b5b27a;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 16px rgba(41, 25, 15, 0.65);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   SIGNUP / LOGIN LINKS
+========================= */
+
+.formitm .account-text {
+    color: #9e9b61;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.form-link {
+    color: #c6c38a;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    align-self: center;
+    text-decoration: underline;
+    margin-bottom: 8px;
+    transition: 0.3s ease;
+}
+
+.form-link:hover {
+    color: #ffffff;
+}
+
+
+/* =========================
+   STATUS MESSAGE
+========================= */
+
+#message {
+    color: #e0d8a2;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+#message:empty {
+    display: none;
+}
+
+
+/* =========================
+   TABLETS
+   769px - 1024px
+========================= */
+
+@media (max-width: 1024px) {
+
+    #loginsec {
+        gap: 30px;
+        padding: 80px 5% 40px;
+    }
+
+    .heading img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .heading h1 {
+        font-size: clamp(28px, 4vw, 38px);
+    }
+
+    .formitm {
+        max-width: 360px;
+        padding: 28px;
+    }
+
+    .formitm h2 {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   481px - 768px
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    #loginsec {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 95px 25px 35px;
+        align-content: center;
+    }
+
+    .back-btn {
+        top: 20px;
+        left: 20px;
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    .heading {
+        margin: 0;
+    }
+
+    .heading img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .heading h1 {
+        font-size: clamp(30px, 6vw, 38px);
+    }
+
+    .heading p {
+        font-size: 14px;
+    }
+
+    .formitm {
+        width: 100%;
+        max-width: 420px;
+        padding: 28px;
+    }
+
+    .formitm input {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   320px - 480px
+========================= */
+
+@media (max-width: 480px) {
+
+    #loginsec {
+        gap: 25px;
+        padding: 85px 16px 25px;
+    }
+
+    .back-btn {
+        top: 15px;
+        left: 15px;
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .heading img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .heading h1 {
+        font-size: 29px;
+    }
+
+    .heading p {
+        font-size: 12px;
+    }
+
+    .formitm {
+        padding: 23px 20px;
+        border-radius: 12px;
+    }
+
+    .formitm h2 {
+        font-size: 23px;
+        margin-bottom: 22px;
+    }
+
+    .formitm label {
+        font-size: 14px;
+    }
+
+    .formitm input {
+        padding: 12px;
+        margin-bottom: 17px;
+    }
+
+    .btn {
+        min-width: 105px;
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+
+    .formitm .account-text {
+        font-size: 13px;
+    }
+
+    .form-link {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================
+   EXTRA SMALL MOBILE
+   BELOW 320px
+========================= */
+
+@media (max-width: 319px) {
+
+    #loginsec {
+        padding: 75px 10px 20px;
+    }
+
+    .heading h1 {
+        font-size: 25px;
+    }
+
+    .formitm {
+        padding: 20px 14px;
+    }
+
+    .formitm h2 {
+        font-size: 21px;
+    }
+
+    .formitm input {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

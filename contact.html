@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP N' CHILL | CONTACT</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header id="head-bar">
+    <div class="logo">
+        SIP <span>N'</span> CHILL
+        <p>cafe . dineIn . delivery</p>
+    </div>
+    <button class="hamburger" id="hamburger" type="button">☰</button>
+    <nav class="nav-bar" id="navBar">
+        <a href="home.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="offers.html">Offers</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+
+        <button id="btn-log">
+            <a href="loginfrm.html">Log In</a>
+        </button>
+    </nav>
+
+</header>
+    <section id="contact-section">
+            <div class="contact-overlay">
+                <span>COME SAY HELLO</span>
+                <h1>Let's make<br><em>something cozy.</em></h1>
+                <p>Great coffee, warm conversations,and a place where you can simply slow down.
+                </p>
+            </div>
+            <div class="contact-heading">
+                <span> CONTACT US </span>
+                <h2>We'd love to<br>hear from you.</h2>
+                <p>Have a question or just want to say hello? Send us a message.</p>
+            
+            
+            <form>
+                <div class="input-box">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="john@example.com" required>
+                </div>
+                <div class="input-box">
+                    <label>Message</label>
+                    <textarea placeholder="Tell us what's on your mind..." required></textarea>
+                </div>
+                <div  class="btn">
+                <button type="submit">Send Message ➤</button>
+                </div>
+            </form>
+            </div>
+        </section>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h2>Sip <span>N'</span> Chill</h2>
+            <h5>cafe . dineIn . delivery</h5>
+        </div>
+        <div class="links">
+            <h3>Quick Links</h3>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>☎ +91 98765 43210</p>
+            <p>✉ hello@sipnchill.com</p>
+            <p>🖈 Tamil Nadu, India</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="icons">
+                <a href="#">◎ Instagram</a>
+                <a href="#">ⓕ Facebook</a>
+                <a href="#">✆ WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Sip N' Chill. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+<button id="backToTop" type="button" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+<script>
+  // back to top
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 300) {
+        backToTop.style.display = "flex";
+    } else {
+        backToTop.style.display = "none";
+    }
+
+});
+
+backToTop.addEventListener("click", function () {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+// hamburger
+const hamburger = document.getElementById("hamburger");
+    const navBar = document.getElementById("navBar");
+
+    hamburger.addEventListener("click", function () {
+        navBar.classList.toggle("active");
+    });
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIP N' CHILL | LOGIN</title>
+  <link rel="stylesheet" href="loginfrm.css">
+</head>
+<body>
+    <section id="loginsec">    
+    <div class="heading">
+    <img src="logo.jpeg" alt="symbolcup">
+   <h1>SIP  <span>N'</span> CHILL</h1>
+   <p>cafe . dineIn . delivery</p>
+   </div>
+   <div class="formitm">
+    <form>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="Email or Username">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required placeholder="Password">
+        <button class="btn">Log In</button>
+        <p>Dont have an account?</p>
+        <a href="#signIn">Sign Up</a>
+    </form>
+   </div>
+   </section>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SIP N' CHILL | LOGIN</title>
+
+    <link rel="stylesheet" href="loginfrm.css">
+
+    <!-- Font Awesome for the back arrow -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <section id="loginsec">
+
+        <!-- Back to main page -->
+        <a href="Sip n' chill.html" class="back-btn" aria-label="Back to home">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <!-- Logo and heading -->
+        <div class="heading">
+            <img src="logo.jpeg" alt="SIP N' CHILL logo">
+
+            <h1>SIP <span>N'</span> CHILL</h1>
+
+            <p>cafe . dineIn . delivery</p>
+        </div>
+
+        <!-- Login form -->
+        <div class="formitm">
+
+            <form id="loginForm">
+
+                <h2>Welcome Back!</h2>
+
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="Enter your email"
+                    autocomplete="email">
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                    minlength="6"
+                    placeholder="Enter your password"
+                    autocomplete="current-password">
+
+                <button type="submit" class="btn">Log In</button>
+
+                <p class="account-text">Don't have an account?</p>
+
+                <a href="#" id="showSignup" class="form-link">
+                    Sign Up
+                </a>
+
+            </form>
+
+            <!-- Signup form: hidden initially -->
+            <form id="signupForm" hidden>
+
+                <h2>Create Account</h2>
+
+                <label for="fullname">Full Name</label>
+                <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    required
+                    placeholder="Enter your full name"
+                    autocomplete="name">
+
+                <label for="signupEmail">Email Address</label>
+                <input
+                    type="email"
+                    id="signupEmail"
+                    name="signupEmail"
+                    required
+                    placeholder="Enter your email"
+                    autocomplete="email">
+
+                <label for="signupPassword">Create Password</label>
+                <input
+                    type="password"
+                    id="signupPassword"
+                    name="signupPassword"
+                    required
+                    minlength="6"
+                    placeholder="Minimum 6 characters"
+                    autocomplete="new-password">
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    required
+                    minlength="6"
+                    placeholder="Confirm your password"
+                    autocomplete="new-password">
+
+                <button type="submit" class="btn">Sign Up</button>
+
+                <p class="account-text">Already have an account?</p>
+
+                <a href="#" id="showLogin" class="form-link">
+                    Log In
+                </a>
+
+            </form>
+
+            <p id="message" role="status" aria-live="polite"></p>
+
+        </div>
+
+    </section>
+
+    <script>
+     
+     
+const loginForm = document.getElementById("loginForm");
+const signupForm = document.getElementById("signupForm");
+
+const showSignup = document.getElementById("showSignup");
+const showLogin = document.getElementById("showLogin");
+
+const message = document.getElementById("message");
+
+const signupPassword = document.getElementById("signupPassword");
+const confirmPassword = document.getElementById("confirmPassword");
+
+// Show signup form
+showSignup.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    loginForm.hidden = true;
+    signupForm.hidden = false;
+
+    message.textContent = "";
+});
+
+// Show login form
+showLogin.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    signupForm.hidden = true;
+    loginForm.hidden = false;
+
+    message.textContent = "";
+});
+
+// Handle login form
+loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    message.textContent =
+        "Login form validated. Connect an authentication backend to log in.";
+
+    loginForm.reset();
+});
+
+// Handle signup form
+signupForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (signupPassword.value !== confirmPassword.value) {
+        message.textContent = "Passwords do not match!";
+        confirmPassword.focus();
+        return;
+    }
+
+    message.textContent =
+        "Signup form validated. Connect a backend to create your account.";
+
+    signupForm.reset();
+});
+
+    </script>
+
+</body>
+</html>

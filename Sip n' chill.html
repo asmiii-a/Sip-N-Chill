@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP N' CHILL | Main</title>
+    <link rel="stylesheet" href="Sip n' chill.css">
+</head>
+<body>
+    <header id="head-bar">
+    <div class="logo">
+        SIP <span>N'</span> CHILL
+        <p>cafe . dineIn . delivery</p>
+    </div>
+    <button class="hamburger" id="hamburger" type="button">☰</button>
+    <nav class="nav-bar" id="navBar">
+        <a href="home.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="offers.html">Offers</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+
+        <button id="btn-log">
+            <a href="loginfrm.html">Log In</a>
+        </button>
+    </nav>
+
+</header>
+    <section id="home">
+        <div class="home-content">
+        <p class="home-title">YOUR TRUSTED PLACE | YOUR FAVOURITE FOOD</p>
+        <h1>Fresh Food.<br>Made With Love.</h1>
+
+        <p class="home-text">Delicious meals, snacks and beverages prepared fresh from our café and delivered straight to your doorstep.</p>
+
+        <div class="home-buttons">
+            <button class="primary-button"><a href="menu.html" >Order Now ➜</a></button>
+            <button class="secondary-button"><a href="about.html" >Our Story</a></button>
+        </div>
+    </div>
+</section>
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const navBar = document.getElementById("navBar");
+
+    hamburger.addEventListener("click", function () {
+        navBar.classList.toggle("active");
+    });
+</script>
+</body>
+</html>
