@@ -156,59 +156,152 @@
 <button id="backToTop" title="Back to top">
     <i class="fa-solid fa-arrow-up"></i>
 </button>
-
+<div id="cart-message" role="status"></div>
  <script>
 
-// cart popup
+
 const cartButton = document.getElementById("cartButton");
 const cartPopup = document.getElementById("cart-popup");
 const closeCart = document.getElementById("close-cart");
+const cartItems = document.getElementById("cart-items");
+const cartCountElement = document.getElementById("cart-Count");
+const cartTotalPrice = document.getElementById("cart-total-price");
+const cartMessage = document.getElementById("cart-message");
 
-cartButton.addEventListener("click", function () {
-    cartPopup.classList.toggle("show");
-});
+let cart = [];
+let messageTimer;
 
-closeCart.addEventListener("click", function () {
-    cartPopup.classList.remove("show");
-});
+function showCartMessage(message) {
+    cartMessage.textContent = message;
+    cartMessage.classList.add("show");
 
-// cartadd
-let cartCount = 0;
+    clearTimeout(messageTimer);
 
-function addToCart() {
-    cartCount++;
-    document.getElementById("cart-Count").textContent = cartCount;
+    messageTimer = setTimeout(() => {
+        cartMessage.classList.remove("show");
+    }, 1800);
 }
 
-// back to top
+// Add combo to cart without opening the cart popup
+function addToCart(button) {
+    const card = button.closest("#combo-list > div");
+
+    if (!card) return;
+
+    const name = card.querySelector("h3").textContent.trim();
+    const priceText = card.querySelector("h1").textContent;
+    const price = Number(priceText.replace(/[^\d.]/g, ""));
+
+    const existingItem = cart.find(item => item.name === name);
+
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cart.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
+    }
+
+    updateCart();
+    showCartMessage(name + " added to cart ✓");
+}
+
+// Update cart items, quantities and total
+function updateCart() {
+    cartCountElement.textContent = cart.reduce(
+        (total, item) => total + item.quantity, 0
+    );
+
+    if (cart.length === 0) {
+        cartItems.innerHTML =
+            '<p class="empty-cart">Your cart is empty</p>';
+    } else {
+        cartItems.innerHTML = cart.map((item, index) => `
+            <div class="cart-product">
+                <div class="cart-product-info">
+                    <span class="cart-product-name">${item.name}</span>
+                    <small>₹${item.price} × ${item.quantity}</small>
+                </div>
+
+                <div class="cart-product-right">
+                    <strong>₹${item.price * item.quantity}</strong>
+                    <button class="remove-cart"
+                            data-index="${index}"
+                            aria-label="Remove ${item.name}">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+        `).join("");
+    }
+
+    const total = cart.reduce(
+        (sum, item) => sum + item.price * item.quantity, 0
+    );
+
+    cartTotalPrice.textContent = "₹" + total;
+}
+
+// Remove an item from cart
+cartItems.addEventListener("click", function (event) {
+    const removeButton = event.target.closest(".remove-cart");
+
+    if (!removeButton) return;
+
+    cart.splice(Number(removeButton.dataset.index), 1);
+    updateCart();
+});
+
+// Open cart only when the cart icon is clicked
+cartButton.addEventListener("click", function () {
+    cartPopup.classList.add("show");
+    document.body.classList.add("cart-open");
+});
+
+// Close cart
+closeCart.addEventListener("click", function () {
+    cartPopup.classList.remove("show");
+    document.body.classList.remove("cart-open");
+});
+
+// Close cart by clicking outside it
+document.addEventListener("click", function (event) {
+    if (
+        cartPopup.classList.contains("show") &&
+        !cartPopup.contains(event.target) &&
+        !cartButton.contains(event.target)
+    ) {
+        cartPopup.classList.remove("show");
+        document.body.classList.remove("cart-open");
+    }
+});
+
+// Back to top
 const backToTop = document.getElementById("backToTop");
 
 window.addEventListener("scroll", function () {
-
-    if (window.scrollY > 300) {
-        backToTop.style.display = "flex";
-    } else {
-        backToTop.style.display = "none";
-    }
-
+    backToTop.style.display =
+        window.scrollY > 300 ? "flex" : "none";
 });
 
 backToTop.addEventListener("click", function () {
-
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
-
 });
 
-// hamburger
+// Hamburger menu
 const hamburger = document.getElementById("hamburger");
-    const navBar = document.getElementById("navBar");
+const navBar = document.getElementById("navBar");
 
-    hamburger.addEventListener("click", function () {
-        navBar.classList.toggle("active");
-    });
+hamburger.addEventListener("click", function () {
+    navBar.classList.toggle("active");
+});
+
 </script>
+<div id="cart-message" role="status" aria-live="polite"></div>
 </body>
 </html>
