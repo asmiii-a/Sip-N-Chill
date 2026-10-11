@@ -499,59 +499,159 @@
 <button id="backToTop" title="Back to top">
     <i class="fa-solid fa-arrow-up"></i>
 </button>
-    <script>
-
-// cart popup
+ <script>
+// CART ELEMENTS
 const cartButton = document.getElementById("cartButton");
 const cartPopup = document.getElementById("cart-popup");
 const closeCart = document.getElementById("close-cart");
+const cartItems = document.getElementById("cart-items");
+const cartCountElement = document.getElementById("cart-Count");
+const cartTotalPrice = document.getElementById("cart-total-price");
 
-cartButton.addEventListener("click", function () {
+// CART DATA
+let cart = [];
+
+// OPEN AND CLOSE CART
+
+cartButton.addEventListener("click", () => {
     cartPopup.classList.toggle("show");
+    document.body.classList.toggle(
+        "cart-open",
+        cartPopup.classList.contains("show")
+    );
 });
 
-closeCart.addEventListener("click", function () {
+closeCart.addEventListener("click", () => {
     cartPopup.classList.remove("show");
+    document.body.classList.remove("cart-open");
 });
 
-// cartadd
-let cartCount = 0;
 
-function addToCart() {
-    cartCount++;
-    document.getElementById("cart-Count").textContent = cartCount;
-}
+// ADD PRODUCT TO CART
+function addToCart(button) {
+    const foodBox = button.closest(".food-box");
 
-// back to top
-const backToTop = document.getElementById("backToTop");
+    const name = foodBox.querySelector("h3").textContent.trim();
 
-window.addEventListener("scroll", function () {
+    const priceText = foodBox.querySelector(".food-bottom strong")
+        .textContent.trim();
 
-    if (window.scrollY > 300) {
-        backToTop.style.display = "flex";
+    const price = Number(priceText.replace(/[^\d.]/g, ""));
+
+    const existingItem = cart.find(item => item.name === name);
+
+    if (existingItem) {
+        existingItem.quantity++;
     } else {
-        backToTop.style.display = "none";
+        cart.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
     }
 
+    renderCart();
+    showCartMessage(name + " added to cart ✓");
+}
+
+// DISPLAY CART ITEMS
+function renderCart() {
+    cartItems.innerHTML = "";
+
+    if (cart.length === 0) {
+        cartItems.innerHTML =
+            '<p class="empty-cart">Your cart is empty</p>';
+    }
+
+    let totalQuantity = 0;
+    let totalPrice = 0;
+
+    cart.forEach((item, index) => {
+        totalQuantity += item.quantity;
+        totalPrice += item.price * item.quantity;
+
+        const product = document.createElement("div");
+        product.className = "cart-product";
+
+        const info = document.createElement("div");
+        info.className = "cart-product-info";
+
+        const name = document.createElement("span");
+        name.className = "cart-product-name";
+        name.textContent = item.name;
+
+        const details = document.createElement("small");
+        details.textContent =
+            `₹${item.price} × ${item.quantity}`;
+
+        info.append(name, details);
+
+        const right = document.createElement("div");
+        right.className = "cart-product-right";
+
+        const subtotal = document.createElement("strong");
+        subtotal.textContent =
+            `₹${item.price * item.quantity}`;
+
+        const removeButton = document.createElement("button");
+        removeButton.className = "remove-cart";
+        removeButton.type = "button";
+        removeButton.textContent = "✕";
+        removeButton.setAttribute("aria-label", `Remove ${item.name}`);
+
+        removeButton.addEventListener("click", () => {
+            cart.splice(index, 1);
+            renderCart();
+        });
+
+        right.append(subtotal, removeButton);
+        product.append(info, right);
+        cartItems.appendChild(product);
+    });
+
+    cartCountElement.textContent = totalQuantity;
+    cartTotalPrice.textContent = `₹${totalPrice}`;
+}
+
+// BACK TO TOP
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    backToTop.style.display =
+        window.scrollY > 300 ? "flex" : "none";
 });
 
-backToTop.addEventListener("click", function () {
-
+backToTop.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
-
 });
 
-// hamburger
+// MOBILE HAMBURGER MENU
 const hamburger = document.getElementById("hamburger");
-    const navBar = document.getElementById("navBar");
+const navBar = document.getElementById("navBar");
 
-    hamburger.addEventListener("click", function () {
-        navBar.classList.toggle("active");
-    });
+hamburger.addEventListener("click", () => {
+    navBar.classList.toggle("active");
+});
+
+let messageTimer;
+
+function showCartMessage(message) {
+    const cartMessage = document.getElementById("cart-message");
+
+    cartMessage.textContent = message;
+    cartMessage.classList.add("show");
+
+    clearTimeout(messageTimer);
+
+    messageTimer = setTimeout(() => {
+        cartMessage.classList.remove("show");
+    }, 1800);
+}
 </script>
+<div id="cart-message" role="status" aria-live="polite"></div>
 </body>
 
 </html>
