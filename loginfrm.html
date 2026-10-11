@@ -1,35 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIP N' CHILL | LOGIN</title>
-  <link rel="stylesheet" href="loginfrm.css">
-</head>
-<body>
-    <section id="loginsec">    
-    <div class="heading">
-    <img src="logo.jpeg" alt="symbolcup">
-   <h1>SIP  <span>N'</span> CHILL</h1>
-   <p>cafe . dineIn . delivery</p>
-   </div>
-   <div class="formitm">
-    <form>
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required placeholder="Email or Username">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required placeholder="Password">
-        <button class="btn">Log In</button>
-        <p>Dont have an account?</p>
-        <a href="#signIn">Sign Up</a>
-    </form>
-   </div>
-   </section>
-</body>
-</html> -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -197,7 +165,7 @@ loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     message.textContent =
-        "Login form validated. Connect an authentication backend to log in.";
+        "LogIn Successfull!";
 
     loginForm.reset();
 });
@@ -213,7 +181,7 @@ signupForm.addEventListener("submit", function (event) {
     }
 
     message.textContent =
-        "Signup form validated. Connect a backend to create your account.";
+        "Signed Up Sucessfully!";
 
     signupForm.reset();
 });
